@@ -1,0 +1,125 @@
+body {
+    background-color: #e6dbd2;
+    text-align: center;
+    background-image: url("/css-odev1/img/anasayfa.webp");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: left 180px;
+    background-size: 600px 500px;
+    font-family: 'Inconsolata', monospace;
+}
+
+.text {
+    text-align: center;
+    font-size: 20px;
+}
+
+h1 {
+    font-family: 'Inconsolata', monospace;
+    font-size: 60px;
+    color: #52734D;
+}
+ul{
+    list-style: none;
+    display: block;
+    word-spacing: 30px;
+}
+ul li{
+    display: inline;
+    position: relative;
+    font-size: 35px;
+}
+
+a:link, a:visited {
+    width: 230px; 
+    height: 30px; 
+    color: #DDFFBC;
+    background-color: #91C788;
+    padding: 12px 20px;
+    border-radius: 14px;
+    border: 3px solid;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  a:hover, a:active {
+    background-color: #DDFFBC;
+    color: #91C788;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 4rem 5vw;
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  .card {
+    position: relative;
+    display: block;
+    height: 100%;  
+    border-radius: calc(var(--curve) * 1px);
+    overflow: hidden;
+    text-decoration: none;
+  }
+  
+  .card__image {      
+    width: 100%;
+    height: auto;
+  }
+  
+  .card__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;      
+    border-radius: calc(var(--curve) * 1px);    
+    background-color: var(--surface-color);      
+    transform: translateY(100%);
+    transition: .2s ease-in-out;
+  }
+  
+  .card:hover .card__overlay {
+    transform: translateY(0);
+  }
+  
+  .card__header {
+    position: relative;
+    align-items: center;
+    gap: 2em;
+    padding: 2em;
+    border-radius: calc(var(--curve) * 1px) 0 0 0;    
+    transform: translateY(-100%);
+    transition: .2s ease-in-out;
+  }
+  
+  .card:hover .card__header {
+    transform: translateY(0);
+  }
+  
+  .card__title {
+    font-size: 1em;
+    margin: 0 0 .3em;
+    color: white;
+  }
+  
+  .card__status {
+    font-size: .8em;
+    color: whitesmoke;
+  }
+  
+  .card__description {
+    padding: 0 2em 2em;
+    margin: 0;
+    color: whitesmoke;
+    font-family: "MockFlowFont";   
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }    
